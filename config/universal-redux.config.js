@@ -59,6 +59,8 @@ module.exports = {
     config: projectRoot + '/.eslintrc'
   },
 
+  // babelConfig: projectRoot + '/.babelrc',
+
   /*
    // Enable native desktop notifications for Webpack build events.
    // Will not be run on production.
