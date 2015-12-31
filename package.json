@@ -101,7 +101,6 @@
     "react-redux": "4.0.0",
     "react-router": "1.0.3",
     "react-toolbox": "^0.13.4",
-    "redux-simple-router": "1.0.1",
     "url-loader": "^0.5.7"
   }
 }
