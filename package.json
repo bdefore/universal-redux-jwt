@@ -96,7 +96,7 @@
     "flexboxgrid": "^6.3.0",
     "normalize.css": "^3.0.3",
     "react": "^0.14.3",
-    "react-addons-css-transition-group": "^0.14.0",
+    "react-addons-css-transition-group": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "4.0.0",
     "react-router": "2.0.0-rc4",
