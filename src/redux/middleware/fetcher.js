@@ -17,6 +17,7 @@ class ApiFetcher {
   constructor() {
     methods.forEach((method) =>
       this[method] = (path, { params, data } = {}) => new Promise((resolve, reject) => {
+        console.log('path, params, data', path, params, data);
         const request = superagent[method](formatUrl(path));
 
         if (params) {
@@ -34,33 +35,30 @@ class ApiFetcher {
             resolve(res);
           }
         });
-
       }));
   }
 }
 
-export default function fetcherMiddleware() {
+export default function fetcherMiddleware({dispatch, getState}) {
   const fetcher = new ApiFetcher();
-  return ({dispatch, getState}) => {
-    return next => action => {
-      if (typeof action === 'function') {
-        return action(dispatch, getState);
-      }
+  return next => action => {
+    if (typeof action === 'function') {
+      return action(dispatch, getState);
+    }
 
-      const { promise, types, ...rest } = action; // eslint-disable-line no-redeclare
-      if (!promise) {
-        return next(action);
-      }
+    const { promise, types, ...rest } = action; // eslint-disable-line no-redeclare
+    if (!promise) {
+      return next(action);
+    }
 
-      const [REQUEST, SUCCESS, FAILURE] = types;
-      next({...rest, type: REQUEST});
-      return promise(fetcher).then(
-        (response) => next({...rest, 'result': response.body, 'response': response, type: SUCCESS}),
-        (error) => next({...rest, error, type: FAILURE})
-      ).catch((error)=> {
-        console.error('FETCHING MIDDLEWARE ERROR:', error);
-        next({...rest, error, type: FAILURE});
-      });
-    };
+    const [REQUEST, SUCCESS, FAILURE] = types;
+    next({...rest, type: REQUEST});
+    return promise(fetcher).then(
+      (response) => next({...rest, 'result': response.body, 'response': response, type: SUCCESS}),
+      (error) => next({...rest, error, type: FAILURE})
+    ).catch((error)=> {
+      console.error('FETCHING MIDDLEWARE ERROR:', error);
+      next({...rest, error, type: FAILURE});
+    });
   };
 }
