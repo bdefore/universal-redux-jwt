@@ -17,7 +17,6 @@ class ApiFetcher {
   constructor() {
     methods.forEach((method) =>
       this[method] = (path, { params, data } = {}) => new Promise((resolve, reject) => {
-        console.log('path, params, data', path, params, data);
         const request = superagent[method](formatUrl(path));
 
         if (params) {
