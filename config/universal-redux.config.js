@@ -141,12 +141,39 @@ module.exports = {
     middleware: sourceRoot + '/redux/middleware/index.js',
   },
 
+  html: {
+    /*
+    // A path to a component that provides additional DOM items to be appended
+    // to the <head>. Optional.
+    //
+    // Expects: String
+    */
+    head: sourceRoot + '/containers/Head/Head.js',
+
+    /*
+    // A path to a component that provides the root html shell. It is strongly
+    // encouraged to instead use html.head and html.body configurations to
+    // provide your own additions, as with this parameter you are responsible
+    // for some of the internals of Universal Redux.
+
+    // Be sure that the content includes all of the items inside of the default
+    // Head and Body inside of Universal Redux's src/server directory.
+    //
+    // Expects: String
+    */
+    // root: sourceRoot + '/containers/Root/Root.js'
+  },
+
   /*
-   // The path to your replacement for the default HTML shell. Optional.
-   // If not provided, the default used will be that in
-   // src/containers/HtmlShell/HtmlShell.js. Will be added to Webpack aliases.
-   */
-  htmlShell: sourceRoot + '/containers/HtmlShell/HtmlShell.js',
+  // Deprecated in favor of html.head and html.body (or html.root if
+  // necessary)
+  //
+  // The path to your replacement for the default HTML shell. Optional.
+  // If not provided, the default used will be that in src/server/html.js
+  //
+  // Expects: String
+  */
+  // htmlShell: sourceRoot + '/containers/HtmlShell/HtmlShell.js',
 
   /*
   // Customizations for Webpack configuration. Optional.
