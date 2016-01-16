@@ -101,7 +101,7 @@
     "react-dom": "^0.14.3",
     "react-redux": "4.0.0",
     "react-router": "2.0.0-rc4",
-    "react-toolbox": "^0.13.4",
+    "react-toolbox": "0.14.0",
     "redux-simple-router": "2.0.1"
   }
 }
