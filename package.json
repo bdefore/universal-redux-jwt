@@ -87,12 +87,12 @@
     "concurrently": "1.0.0",
     "jsonwebtoken": "^5.4.1",
     "superagent": "^1.6.1",
-    "universal-redux": "3.0.0-rc8"
+    "universal-redux": "3.0.0-rc16"
   },
   "devDependencies": {
     "better-npm-run": "0.0.5",
     "classnames": "^2.2.0",
-    "eslint-config-airbnb": "0.1.0",
+    "eslint-config-airbnb": "0.1.1",
     "express-jwt-proxy": "^0.5.4",
     "flexboxgrid": "^6.3.0",
     "normalize.css": "^3.0.3",
@@ -100,8 +100,8 @@
     "react-addons-css-transition-group": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "4.0.0",
-    "react-router": "2.0.0-rc4",
+    "react-router": "2.0.0-rc5",
     "react-toolbox": "0.14.0",
-    "redux-simple-router": "2.0.1"
+    "redux-simple-router": "2.0.3"
   }
 }
