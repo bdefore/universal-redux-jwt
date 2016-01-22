@@ -2,6 +2,10 @@
   "name": "universal-redux-jwt",
   "version": "0.0.1",
   "description": "JWT example with Universal Redux",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdefore/universal-redux-jwt.git"
+  },
   "main": "index.js",
   "scripts": {
     "api-server": "better-npm-run api-server",
@@ -87,7 +91,7 @@
     "concurrently": "1.0.0",
     "jsonwebtoken": "^5.4.1",
     "superagent": "^1.6.1",
-    "universal-redux": "3.0.0-rc19"
+    "universal-redux": "3.0.0-rc20"
   },
   "devDependencies": {
     "better-npm-run": "0.0.5",
