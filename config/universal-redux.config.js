@@ -52,6 +52,21 @@ module.exports = {
   },
 
   /*
+  // Providers for the root component to assemble. Built in options
+  // include 'react-router', 'redux-simple-router', 'redux-async-connect',
+  // 'async-props'. Custom root components may accept additional options.
+  // Optional. If unspecified will use react-router, redux-simple-router,
+  // and redux-async-connect.
+  //
+  // Expects: Array
+  */
+  providers: [
+    'react-router',
+    'redux-simple-router',
+    'async-props'
+  ],
+
+  /*
    // Globals available to both serverside and clientside rendering.
    // You may also add your own here.
    */
