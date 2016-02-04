@@ -91,7 +91,7 @@
     "concurrently": "1.0.0",
     "jsonwebtoken": "^5.4.1",
     "superagent": "^1.6.1",
-    "universal-redux": "3.0.0-rc23"
+    "universal-redux": "3.0.0-rc27"
   },
   "devDependencies": {
     "better-npm-run": "0.0.5",
@@ -103,7 +103,7 @@
     "react": "^0.14.3",
     "react-addons-css-transition-group": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-redux": "4.0.0",
+    "react-redux": "4.2.1",
     "react-router": "2.0.0-rc5",
     "react-router-redux": "2.1.0",
     "react-toolbox": "0.14.0"
