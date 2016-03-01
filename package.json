@@ -11,7 +11,7 @@
     "api-server": "better-npm-run api-server",
     "auth-server": "better-npm-run auth-server",
     "build": "better-npm-run build",
-    "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run api-server\" \"npm run auth-server\" \"npm run dev-server\"",
+    "dev": "concurrently --kill-others \"npm run watch-client\" \"npm run api-server\" \"npm run auth-server\" \"npm run dev-server\"",
     "dev-server": "better-npm-run dev-server",
     "lint": "eslint -c .eslintrc src",
     "postinstall": "./bin/build_for_heroku.sh",
