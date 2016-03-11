@@ -3,6 +3,7 @@ import { express, renderer, start } from 'universal-redux';
 import universalConfig from '../config/universal-redux.config.js';
 import authConfig from '../config/express-jwt-proxy.config.js';
 import jwtProxy from 'express-jwt-proxy';
+import test from 'ava';
 
 const app = express(universalConfig);
 
