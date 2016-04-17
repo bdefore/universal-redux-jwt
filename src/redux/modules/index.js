@@ -5,8 +5,8 @@ import auth from './auth';
 import api from './api';
 
 export default combineReducers({
-  auth: auth,
-  api: api,
+  auth,
+  api,
   reduxAsyncConnect,
   routing: routeReducer
 });
